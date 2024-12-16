@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une Famille{% endblock %}
+
+{% block body %}
+<h1>Ajouter une nouvelle famille :</h1>
+{{ form_start(form) }}
+    {{ form_row(form.nom) }}
+        
+    <button type="submit">Soumettre</button>
+{{ form_end(form) }}
+{% endblock %}

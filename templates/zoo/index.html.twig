@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les Zoo{% endblock %}
+
+{% block body %}
+<h1>Liste des Zoo :</h1>
+
+<table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for zoo in zoos %}
+                <tr>
+                    <td>{{ zoo.nom }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{path('app_animaux')}}">Retour à la liste des Animaux</a>
+{% endblock %}

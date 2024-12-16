@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les Animaux du Zoo{% endblock %}
+
+{% block body %}
+<h1>Liste des Animaux</h1>
+
+<ul>
+    {% for animal in animaux %}
+        <li>{{ animal.nom }} - {{ animal.famille }} - {{ animal.continent }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ path('add_animaux') }}">Ajouter un nouvel animal</a>
+{% endblock %}

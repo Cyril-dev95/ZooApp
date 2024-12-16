@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un nouvel Animal{% endblock %}
+
+{% block body %}
+<h1>Ajouter un nouvel Animal :</h1>
+
+{{ form_start(form) }}
+    {{ form_row(form.nom) }}
+    
+    {{ form_row(form.famille) }}
+    
+    {{ form_row(form.continent) }}
+    
+    {{ form_row(form.zoo) }}
+    
+    {{ form_row(form.dangereux) }}
+    
+    <div>
+        {{ form_label(form.images) }}
+        {{ form_widget(form.images) }}
+        {{ form_errors(form.images) }}
+    </div>
+    
+    <button type="submit">Soumettre</button>
+{{ form_end(form) }}
+    <a href="{{path('app_animaux')}}">Retour à la liste des Animaux</a>
+{% endblock %}

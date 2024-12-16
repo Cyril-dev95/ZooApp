@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un nouveau Continent{% endblock %}
+
+{% block body %}
+<h1>Ajouter un nouveau continent :</h1>
+{{ form_start(form) }}
+    {{ form_row(form.nom) }}
+        
+    <button type="submit">Soumettre</button>
+{{ form_end(form) }}
+{% endblock %}
