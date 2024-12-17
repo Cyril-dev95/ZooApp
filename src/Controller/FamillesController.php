@@ -2,9 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Animaux;
 use App\Entity\Familles;
-use App\Form\AnimauxType;
 use App\Form\FamillesType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
